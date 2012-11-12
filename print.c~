@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+extern FILE* out;
+
+void printUseage()
+{
+	fprintf(out, 
+	"\nmanipulator [-i]|[-f input_file output_file] [-h]\n\n-i : To run the program interactively and read the commands from the command-line and output back to the command-line. All error messages are also reported to the command-line.\n\n-f input_file output_file : To read the program command inputs from input_file and output the results to the output_file. All error messages are also reported in the output_file. Make sure that if the user is using this switch, he is providing names for input_file and output_file. Only one of –i or –f switch should be provided. If both are provided –i takes precedence over –f and the program will behave interactively.\n\n-h : Prints the usage information. The usage information includes the commands supported by the program (a one line description and usage information) and the switch arguments.\n\nCOMMANDS:\n\nbase1_2_base1 [base 2-16] [base 2-16] [number >= 0]\nhexadec_2_bit [hexadecimal number]\nfibonaci_ser [number >= 1]\nreverse_strng [string]\nremove_spaces [string]\ncharacter_frq [string]\ncipher_string [shift integer] [rotation integer] [string]\nexit_program_\n\n");
+}
+
+void printNumberError(char* str)
+{
+	fprintf(out, "Please enter a number for ");
+	fprintf(out, str);
+	fprintf(out, ". Please try again\n");
+}
+
+void printStringError(char* str)
+{
+	fprintf(out, "Please enter a string for ");
+	fprintf(out, str);
+	fprintf(out, ". Please try again\n");
+}
+
+void printBaseError(int base)
+{
+	fprintf(out, "The given number is not in base ");
+	fprintf(out, "%d", base);
+	fprintf(out, ". Please try again.\n");
+}
