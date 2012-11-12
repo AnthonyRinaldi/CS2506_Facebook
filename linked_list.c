@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "linked_list.h"
 
-struct node
+/*struct node
 {
 	int data;
 	struct node *next;
@@ -13,9 +14,9 @@ void addafter(struct node *, int, int);
 void display(struct node *);
 int count(struct node *);
 void delete(struct node **, int);
-struct node * find(struct node *, int);
+struct node * find(struct node *, int);*/
 
-
+/*
 int main()
 {
 	struct node *p;
@@ -25,7 +26,7 @@ int main()
 	append(&p, 1);
 	append(&p, 2);
 	append(&p, 3);
-	display(p);
+	display(p);*/
 
 /*
 	addatbeg(&p, 999);
@@ -50,8 +51,8 @@ int main()
 	printf("\n The final count is %d\n", count(p));
 */
 
-	return 0;
-}
+//	return 0;
+//}
 
 
 //Adds a node at the end of the linked list
