@@ -8,6 +8,7 @@
 #include <ctype.h> 
 #include "linked_list.h"
 #include "print.h"
+#include "users.h"
 
 // Delcare helper methods
 void parse_command(char commStr[], int stringSize);
@@ -15,17 +16,10 @@ void parse_command(char commStr[], int stringSize);
 // Declare variables...
 FILE* out;
 FILE* in;
-int userNum;
-
-// Declare structs
-struct user
-{
-	int key;
-	char* name;
-	char* location;
-	int gender;
-	int age;
-};
+// Total number of users
+int firstFreeEntry;
+// User Array
+struct user users[];
 
 
 int main(int argc, char* argv[])
@@ -127,7 +121,7 @@ void parse_command(char commStr[], int stringSize)
 			dig = dig * isdigit(str1[i]);
 		}*/
 // Put the info into command and the number in num1
-		if(temp < 4)
+		if(temp < 5)
 		{
 			// Not enough command parameters
 		}
