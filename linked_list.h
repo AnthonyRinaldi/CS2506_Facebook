@@ -1,6 +1,7 @@
 #ifndef LLIST
 #define LLIST
 
+// Declare structs
 struct node
 {
 	
