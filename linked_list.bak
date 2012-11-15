@@ -4,11 +4,7 @@
 
 /*struct node
 {
-	char* name;
-	char* location;
-	int   gender;
-	int   age;
-
+	int data;
 	struct node *next;
 };
 
@@ -60,7 +56,7 @@ int main()
 
 
 //Adds a node at the end of the linked list
-void append(struct node **q, char* n, char* l, int g, int a)
+void append(struct node **q, int num)
 {
 	struct node *temp, *r;
 	temp = *q;
@@ -68,10 +64,7 @@ void append(struct node **q, char* n, char* l, int g, int a)
 	if(*q == NULL) //If the list is empty, creat first node
 	{
 		temp = (struct node *)malloc(sizeof(struct node));
-		temp->name = n;
-		temp->location = l;
-		temp->gender = g;
-		temp->age = a;
+		temp->data = num;
 		temp->next = NULL;
 		*q = temp;
 	}
@@ -83,10 +76,7 @@ void append(struct node **q, char* n, char* l, int g, int a)
 
 		//Add node at the end
 		r = (struct node *)malloc(sizeof(struct node));
-		r->name = n;
-		r->location = l;
-		r->gender = g;
-		r->age = a;
+		r->data = num;
 		r->next = NULL;
 		temp->next = r;
 	}
@@ -94,40 +84,34 @@ void append(struct node **q, char* n, char* l, int g, int a)
 
 
 //Adds a node at the beginning of the linked list
-void addatbeg(struct node **q, char* n, char* l, int g, int a)
+void addatbeg(struct node **q, int num)
 {
 	struct node *temp;
 
 	//add a new node
 	temp = (struct node *)malloc(sizeof(struct node));
-	temp->name = n;
-	temp->location = l;
-	temp->gender = g;
-	temp->age = a;
+	temp->data = num;
 	temp->next = *q;
 	*q = temp;
 }
 
 
 //Adds a node after the specified node
-void addafter(struct node *q, char* n, char* l, int g, int a)
+void addafter(struct node *q, int num, int data)
 {
 	struct node *temp, *r;
 
-	temp = find(q, n, l, g, a);
+	temp = find(q, num);
 	if(temp != NULL)
 	{
 		r = (struct node *)malloc(sizeof(struct node));
-		r->name = n;
-		r->location = l;
-		r->gender = g;
-		r->age = a;
+		r->data = data;
 		r->next = temp->next;
 		temp->next = r;
 	}
 	else
 	{
-		printf("\n %s is not a part of the linked list\n", n);
+		printf("\n %d is not a part of the linked list\n", data);
 	}
 }
 
@@ -138,7 +122,7 @@ void display(struct node *q)
 	printf("\n");
 	while(q != NULL)
 	{
-		printf(" %s ->", q->name);
+		printf(" %d ->", q->data);
 		q = q->next;
 	}
 	printf(" NULL\n");
@@ -166,7 +150,7 @@ int count(struct node *q)
 	return c;
 }
 
-struct node * find(struct node *q, char* n, char* l, int g, int a)
+struct node * find(struct node *q, int num)
 {
 	if(q == NULL)
 	{
@@ -174,7 +158,7 @@ struct node * find(struct node *q, char* n, char* l, int g, int a)
 		return q;
 	}
 
-	while(q->name != n && q->location != l && q->gender != g && q->age != a)
+	while(q->data != num)
 	{
 		q = q->next;
 		if(q == NULL)
@@ -186,34 +170,14 @@ struct node * find(struct node *q, char* n, char* l, int g, int a)
 	return q;
 }
 
-struct node * findName(struct node *q, char* n)
-{
-	if(q == NULL)
-	{
-		printf("\n The list is empty\n");
-		return q;
-	}
-
-	while(q->name != n)
-	{
-		q = q->next;
-		if(q == NULL)
-		{
-			printf("\n The given number is not in the list\n");
-			return q;
-		}
-	}
-	return q;
-}
-
-void delete(struct node **q, char* n, char* l, int g, int a)
+void delete(struct node **q, int num)
 {
 	struct node *temp, *old;
 	temp = *q;
 
 	while(temp != NULL)
 	{
-		if(temp->name != n && temp->location != l && temp->gender != g && temp->age != a)
+		if(temp->data == num)
 		{
 			//if the node to delete is the first node
 			if(temp == *q)
@@ -238,5 +202,5 @@ void delete(struct node **q, char* n, char* l, int g, int a)
 		}
 	}
 	
-	printf("\n %s is not a part of the linked list\n", n);
+	printf("\n %d is not a part of the linked list\n", num);
 }

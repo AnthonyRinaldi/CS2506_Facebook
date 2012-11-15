@@ -16,16 +16,7 @@ void parse_command(char commStr[], int stringSize);
 FILE* out;
 FILE* in;
 int userNum;
-
-// Declare structs
-struct user
-{
-	int key;
-	char* name;
-	char* location;
-	int gender;
-	int age;
-};
+struct node *root;
 
 
 int main(int argc, char* argv[])
@@ -33,7 +24,7 @@ int main(int argc, char* argv[])
 	// set user number to userNum
 	userNum = 0;
 	// Create new llist root node
-	struct node *root;
+	
 	root = NULL;
 
 	char buffer[200];
@@ -110,7 +101,8 @@ void parse_command(char commStr[], int stringSize)
 	sscanf(commStr, "%s", command);
 	if (strncmp(command,"exit_program",13) == 0)
 	{/* Do nothing!!! It is handled in the parent method */}
-	// fibonacci_ser
+
+	// Add User
 	else if (strncmp(command,"add_user",8) == 0 )
 	{
 		int temp = sscanf(commStr, "%s %s %d %s %s", command, str1, &num1, str2, str3);
@@ -129,14 +121,94 @@ void parse_command(char commStr[], int stringSize)
 // Put the info into command and the number in num1
 		if(temp < 4)
 		{
+			fprintf(out, "Useage: add_user name age gender location\n");
 			// Not enough command parameters
 		}
+		// TODO: Check if already a user
 		else
 		{
 			// Add the user to the llist.
-			
+			/*struct node add;
+			add.name = str1;
+			add.age = num1;
+			add.location = str3;
+			if (str2 == "male")
+				add.age = 0;
+			else
+				add.age = 1;
+			userNum++;
+			if (root == NULL)
+				root = add;
+			else*/
+
+			if (str2 == "male")
+				append(&root, str1, str2, num1, 0);
+			else if (str2 == "female")
+				append(&root, str1, str2, num1, 1);
+
 			fprintf(out, "%s joined facebook\n", str1);
 		}
+	}
+	// Add Friend
+	else if (strncmp(command,"add_friend ",12) == 0 )
+	{
+		int temp = sscanf(commStr, "%s %s %s", command, str1, str2);
+		/*
+		str1 = friend1
+		str2 = friend2
+		*/
+		if(temp < 3)
+		{
+			// Not enough command parameters
+		}
+		// TODO: Check isExist, Ensure not already friends
+		else
+		{
+			// TODO: Make list sorted
+			// TODO: Create friendNode LLIST
+			findName(root, str1);
+			findName(root, str2);
+		}
+		
+	}
+	// Display the facebook graph
+	else if (strncmp(command,"display_graph",13) == 0 )
+	{
+		int temp = sscanf(commStr, "%s %s", command, str1);
+		/*
+		str1 = friend1
+		str2 = friend2
+		*/
+		if(temp < 1 || temp > 1)
+		{
+			fprintf(out, "Useage: display_graph");
+			// Not enough/too many command parameters
+		}
+		else
+		{
+			/* EXAMPLE Useage
+			user1 -> user3 -> NULL
+			user2 -> user3 -> NULL
+			user3 -> user1 -> user2 -> NULL
+			*/
+			struct node *t;
+			t = root;
+			if (t == NULL)
+			{
+				// PRINT EMPTY
+				fprintf(out, "No users present on facebook\n");
+			}
+			else while (t != NULL)
+			{
+				// Print User
+				fprintf(out, "%s -> ", (*t).name);
+				// TODO: Print friends;
+				fprintf(out, "\n");
+				t = (*t).next;
+			}
+			
+		}
+		
 	}
 
 }
