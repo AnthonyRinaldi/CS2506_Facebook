@@ -1,0 +1,66 @@
+This is a command-line interface to facebook and works as follows:
+		
+		./social_network [-i]|[-f input_file output_file] [-h]
+
+		-i : interactive
+		-f : file mode
+		-h : help
+
+The commands supported by facebook are as follows:
+
+	add_user : Adds a user to the social network
+        	   Usage: add_user name age gender location
+			   name = alpha-numeric username of max length 20 characters (No spaces allowed)
+                           age = Integer. Between 1 and 100
+		   	   gender = male/female (convert this to 1 or 0 while storing)
+        	           location = alpha-numeric location of max length 20 characters (No spaces allowed)
+            	   Output: If adding the user is successful, prints "username joined facebook"
+
+	add_friend : Takes two usernames and adds them as friend in the social network
+                     Usage: add_friend username1 username2
+                            username1 = Name of the first user
+		            username2 = Name of the second user
+              	     Output: If added successfully, prints "username1 and username2 are friends now"
+ 
+	delete_friend : Takes two usernames and unfriend them
+                        Usage: delete_friend username1 username2
+                               username1 = Name of the first user
+  		               username2 = Name of the second user
+                 	Output: If successfully deleted, prints "username1 and username2 are no longer friends"
+
+	delete_user : Takes a username, remove all his friends and then delete the user
+               	      Usage: delete_user username
+                             username = Name of the user to delete
+               	      Output: If successful, prints "username left facebook"
+
+	display_friends : Takes a username and displays all his friends
+                          Usage: display_friends username
+                                 Username = Name of the user
+                          Output: If the user has friends, then an alphabetically sorted list of friends along 
+				  with the Count (prints it before printing the list). Otherwise prints 
+				  username has no friends
+
+        search_users : Search users based on either name, location, age or gender. Searching can be done based on 
+                       only one of the keywords (ie only one among location/age/gender/location). 
+                       No AND or OR operators supported. 
+                       Usage: search_users location location_name
+		       	      search_users name username
+		              search_users age age_int
+                              search_users gender male/female
+                       Output: If users found, prints the alphabetically sorted list of users in following format
+  		               username1/age/sex/location, username2/age/sex/location; along with the count.
+
+	suggest_friends : Takes a username and suggests users of opposite sex having maximum no. of mutual friends
+                          Usage: suggest_friends username
+                                 username: Name of the user
+                   	  Output: If users found, print the alphabetically sorted list of users in following format
+  		                  username1/age/location, username2/age/location 
+		                  If no users found, print, .No users to suggest.
+ 
+	display_graph: Display the whole graph of users and friends
+                       Usage: display_graph
+                       Output: A sorted list of users along with the sorted list of their friends 
+
+	exit_program : Quits the program
+                       Usage: exit_program_
+

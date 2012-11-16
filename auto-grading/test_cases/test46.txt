@@ -1,0 +1,10 @@
+add_user abc 20 male somewhere
+add_user bcd 20 male somewhere
+add_friend abc bcd
+add_user dcf 20 female somewhere
+add_user scott 21 male blacksburg
+display_graph
+suggest_friends bcd
+delete_friend abc bcd
+display_graph
+exit_program

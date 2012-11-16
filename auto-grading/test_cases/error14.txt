@@ -1,0 +1,6 @@
+add_user Cow 23 female BB
+add_user BrownCow 23 male BB
+add_user bROWNcOW 23 male bb
+add_user Micky 23 MALE BB
+add_user Minney 23 FEMALE BB
+exit_program

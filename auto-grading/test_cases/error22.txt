@@ -1,0 +1,3 @@
+add_user batman 38 male gotham
+add_friend batman batman
+exit_program

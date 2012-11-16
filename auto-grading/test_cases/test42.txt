@@ -1,0 +1,28 @@
+add_user user1 30 male Ohio
+add_user user2 15 female Pennsylvania
+add_user user3 1 male Candyland
+add_user Charles 23 female GenderReversal
+add_user Susan 56 female Giles
+add_friend user1 Charles
+add_friend user1 user3
+add_friend user1 user3
+add_friend Charles user1
+add_friend Charles Susan
+display_graph
+suggest_friends user2
+suggest_friends user1
+suggest_friends Charles
+display_friends user3
+display_friends user2
+search_users location theHood
+search_users location GenderReversal
+search_users gender female
+search_users gender male
+search_users occupation stripper
+delete_user user3
+delete_user user1
+delete_friend user2 user1
+delete_friend Charles Susan
+display_friends Charles
+display_graph
+exit_program

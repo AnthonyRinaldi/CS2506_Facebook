@@ -1,0 +1,12 @@
+delete_friend invalidUser1 invalidUser2
+add_friend invalidUser1 invalideUser2
+suggest_friends invalidUser
+delete_user invalidUser
+add_user user1 20 male Blacksburg
+add_user user2 20 female Blacksburg
+delete_user user1
+delete_user user1
+add_friend user2 user1
+suggest_friends user1
+search_users gender male
+exit_program

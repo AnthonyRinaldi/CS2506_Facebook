@@ -1,0 +1,7 @@
+add_user usr 1A male term
+add_user usr2 22 mate someplace
+add_user usr3 22 1 bburg
+add_friend usr2 usr3
+search_users ate 14
+search_users gender mate
+exit_program

@@ -1,0 +1,9 @@
+add_user penny 31 female Apartment1
+add_user leonard 32 male Apartment2
+delete_friend sheldon amy
+delete_friend penny amy
+delete_friend leonard penny
+suggest_friends leonard
+add_friend leonard penny
+display_graph
+exit_program

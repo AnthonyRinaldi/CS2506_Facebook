@@ -1,0 +1,15 @@
+add_user user1 20 male location1
+add_user user2 20 female location2
+add_user user3 20 male loaciton3
+suggest_friends user2
+add_friend user1 user2
+add_friend user1 user3
+suggest_friends user2
+search_users name user1
+search_users name user4
+delete_friends user1 user3
+delete_user user1
+display_friends user2
+display_friends user3
+add_user user1 20 male location1
+exit_program

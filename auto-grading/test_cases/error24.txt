@@ -1,0 +1,7 @@
+add_user david 19 male fairfax
+add_friend david mom
+add_user t!mmie 20 male mclean
+delete_friend david t!mmie
+delete_fried david timmy
+delete_friend david timmy
+exit_program

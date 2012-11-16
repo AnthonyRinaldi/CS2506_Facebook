@@ -1,0 +1,6 @@
+add_user Jones 33 Male Charlotte
+add_user James 17 Male Mooresville
+add_friend Jones James
+display_friends Jones
+display_friends James
+exit_program

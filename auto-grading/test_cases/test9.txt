@@ -1,0 +1,25 @@
+display_graph
+add_user Walter 52 male Albuquerque
+add_user Skyler 40 female Albuquerque
+add_user Jesse 25 male Albuquerque
+add_user Marie 38 female Albuquerque
+add_friend Walter Skyler
+add_friend Walter Marie
+add_friend Skyler Marie
+add_friend Walter Jesse
+display_graph
+display_friends Walter
+search_users location Albuquerque
+search_users gender male
+add_user Ted 48 male Albuquerque
+add_friend Ted Skyler
+suggest_friends Walter
+delete_friends Walter Skyler
+delete_user Skyler
+delete_user Jesse
+delete_user Marie
+delete_user Walter
+display_graph
+display_friends Ted
+display_graph
+exit_program

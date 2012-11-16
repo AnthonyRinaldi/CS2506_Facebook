@@ -1,0 +1,13 @@
+add_user bob 7 male Blacksburg
+add_user jim 26 male Blackburg
+add_user Beatrice 38 female Blacksburg
+add_user sarah 20 female Blacksburg
+add_friend bob sarah
+add_friend jim beatrice
+add_friend bob jim
+suggest_friends jim 
+add_friend jim sarah
+display_graph
+delete_user sarah
+display_graph
+exit_program

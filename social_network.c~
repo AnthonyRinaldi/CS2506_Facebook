@@ -62,7 +62,7 @@ int main(int argc, char* argv[])
 		in = fopen(argv[2],"r");
 		out = fopen(argv[3],"w");
 		
-		// take the buffer and check it out.
+		// take the buffer and check it out. Does EOF test, too...
 		while (strncmp(buffer, "exit_program",12) != 0 && fgets(buffer, sizeof(buffer), in) != NULL)
 		{
 			//fprintf(out, buffer);
@@ -139,7 +139,7 @@ void parse_command(char commStr[], int stringSize)
 			if (root == NULL)
 				root = add;
 			else*/
-			//fprintf(out, "Add User %s\n", str1);
+			//fprintf(out, "Add User %s\n", str1);		
 			if (strncmp(str2,"male",4) == 0)
 				append(&root, str1, str2, num1, 0);
 			else if (strncmp(str2,"female",6) == 0)
@@ -169,15 +169,16 @@ void parse_command(char commStr[], int stringSize)
 			struct node * fr2;
 			fr1 = findName(&root, str1);
 			fr2 = findName(&root, str2);
+			fprintf(out, "Try to friend: %s and %s\n", fr1->name, fr2->name);
 			
 			// Only friend if they are not yet.
-			if (isFriends(&fr1, &fr2) > 0)
+			//if (isFriends(&fr1, &fr2) == 0)
 			{
 				appendF(&fr1, &fr2);
 				fprintf(out, "%s and %s are now friends\n", str1, str2);
 			}
-			else
-				fprintf(out, "%s and %s are already friends\n", str1, str2);
+			//else
+			//	fprintf(out, "%s and %s are already friends\n", str1, str2);
 		}
 		
 	}	
@@ -199,22 +200,23 @@ void parse_command(char commStr[], int stringSize)
 			/* EXAMPLE Useage
 			user1 -> user3 -> NULL
 			user2 -> user3 -> NULL
-			user3 -> user1 -> user2 -> NULL
+			user3 -> user(*r)->fr1 -> user2 -> NULL
 			*/
-			struct node *t;
-			t = root;
-			if (t == NULL)
+			struct node **t;
+			t = (struct node **)malloc(sizeof(struct node*));
+			*t = root;
+			if (*t == NULL)
 			{
 				// PRINT EMPTY
 				fprintf(out, "No users present on facebook\n");
 			}
-			else while (t != NULL)
+			else while (*t != NULL)
 			{
 				// Print User
-				fprintf(out, "%s -> ", (*t).name);
+				fprintf(out, "%s -> ", (**t).name);
 				// TODO: Print friends;
 				fprintf(out, " FRIENDS\n");
-				t = (*t).next;
+				*t = (**t).next;
 			}
 			
 		}

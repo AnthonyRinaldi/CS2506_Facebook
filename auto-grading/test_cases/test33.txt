@@ -1,0 +1,15 @@
+add_user user1 15 male ville
+add_user user2 14 male ville
+add_user user3 12 female ville
+add_user user4 19 male burg
+add_user user5 50 female canada
+add_friend user2 user1
+add_friend user 1 user4
+display_friends user1
+display_friends user2
+search_users location ville
+add_user user6 25 female ville
+add_friend user6 user2
+suggest_friends user1
+delete_friend user6 user2
+exit_program

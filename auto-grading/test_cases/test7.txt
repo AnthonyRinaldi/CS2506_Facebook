@@ -1,0 +1,5 @@
+add_user john 21 male blacksburg
+add_user ryan 20 male blacksburg
+add_friend john ryan
+display_graph
+exit_program

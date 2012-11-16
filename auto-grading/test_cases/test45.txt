@@ -1,0 +1,11 @@
+add_user scott 20 male blacksburg
+add_user tyler 1 male blacksburg
+add_user darrel 0 male GlenAllen
+add_friend tyler scott
+add_user Samantha 21 female Blacksburg
+suggest_friends tyler
+add_friend scott samantha
+suggest_friends tyler
+suggest_friends samantha
+display_graph
+exit_program

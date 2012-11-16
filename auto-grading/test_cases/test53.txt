@@ -1,0 +1,11 @@
+add_user justinbieber 14 female orlando
+suggest_friends justinbieber
+add_user usher 32 male orlando
+add_friend justinbieber usher
+add_user selenagomez 20 female la
+add_friend justinbieber selenagomez
+delete_friend justinbieber usher
+display_graph
+suggest_friends usher
+delete_user justinbieber
+exit_program

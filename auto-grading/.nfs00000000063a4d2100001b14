@@ -1,0 +1,136 @@
+#!/bin/bash
+
+points=0
+INTERACTIVE=1
+FILE=1
+
+IFS="
+"
+
+printf "\n\n\033[1;37;44mCOMPILING PROGRAM"
+tput sgr0
+printf "\n"
+
+cd ..
+gcc *.c -o social_network -Wall -Werror
+if [ $? = 0 ]; then
+	echo -e "\033[1;32mCompilaion Successful"
+	tput sgr0
+	cp social_network auto-grading/
+	cd auto-grading
+else
+	echo -e "\033[1;31mCompilaion Error. There are warnings in your program. Please fix this or you will lose 10 points. Recomiping without treating warnings as errors ..."
+	tput sgr0
+	points=$((points - 10))
+	gcc *.c -o social_network -Wall
+	if [ $? = 0 ]; then
+		echo -e "\033[1;32mCompilaion Successful with warnings"
+		echo -e "Do you want to continue grading or exit to fix the warnings? Enter yes to continue and no to exit:"
+        	tput sgr0
+		read choice </dev/tty
+		if [ $choice = "yes" ]; then
+        		cp social_network auto-grading/
+        		cd auto-grading
+		else
+			exit 1
+		fi
+	else
+		echo -e "\033[1;31mCompilaion Error."
+        	tput sgr0
+		exit 1
+	fi
+fi
+
+
+echo "Your points = $points"
+
+if [ $INTERACTIVE = 1 ]; then
+printf "\n\n\033[1;37;44mINTERACTIVE GRADING STARTS" 
+tput sgr0
+printf "\n"
+
+#read test </dev/tty
+
+./social_network -i > student_out << EOF
+put test_cases/error1.txt
+EOF
+
+exit 1
+
+./manipulator_ta -i > ta_out << EOF
+$command
+exit_program_
+EOF
+
+cmp -s student_out ta_out
+if [ $? = 0 ]; then
+	points=$((points + 1))
+	printf "\n----------------------------------------------------------\n"
+	echo -e "\033[0;32m\"$command\" (interactive) successfully executed. \033[1mTotal points = $points \033[0m"
+	tput sgr0
+else
+	printf "\n-----------------------------------------------------------\n"
+	echo -e "\033[0;31m\"$command\" (interactive) failed. The TA's implementation returned \033[0;35m"
+	cat ta_out
+	echo -e "\033[0;31mand your implementation retuned \033[0;36m"
+	cat student_out
+	tput sgr0
+fi	
+
+
+rm ta_out
+rm student_out
+
+fi
+
+
+
+
+if [ $FILE = 1 ]; then
+printf "\n\n\033[1;37;44mFILE MODE GRADING STARTS"
+tput sgr0
+printf "\n"
+
+#./manipulator -f file_commands student_out
+#./manipulator_ta -f file_commands ta_out
+
+#i=1
+while read command; do
+#sed -n "$i"p student_out > stud_file_out
+#sed -n "$i"p ta_out > ta_file_out
+#i=$((i + 1))
+
+echo $command > test_command
+echo "exit_program_" >> test_command
+
+#cat test_command
+
+./manipulator -f test_command stud_file_out
+./manipulator_ta -f test_command ta_file_out
+
+cmp -s stud_file_out ta_file_out
+if [ $? = 0 ]; then
+        points=$((points + 1))
+        printf "\n----------------------------------------------------------\n"
+        echo -e "\033[0;32m\"$command\" (file) successfully executed. \033[1mTotal points = $points \033[0m"
+	tput sgr0
+else
+        printf "\n-----------------------------------------------------------\n"
+        echo -e "\033[0;31m\"$command\" (file) failed. The TA's implementation returned \033[0;35m"
+        cat ta_file_out
+        echo -e "\033[0;31mand your implementation retuned \033[0;36m"
+        cat stud_file_out
+	tput sgr0
+fi
+done < file_commands
+
+rm ta_file_out
+rm stud_file_out
+rm test_command
+#rm student_out
+#rm ta_out
+
+fi
+
+
+

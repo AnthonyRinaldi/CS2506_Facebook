@@ -1,0 +1,3 @@
+add_user Jeff 41 Male Greendale
+add_friend Jeff Abed
+exit_program

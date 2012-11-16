@@ -1,0 +1,6 @@
+add_user Church thirty male canyon
+add_user Tucker 28 male blood gulch
+delete_user Tex
+add_friend Church Caboose
+display_friends Sarge
+exit_program

@@ -1,0 +1,8 @@
+delete_user abcd
+add_user abcd 4 female Blakcsburg
+add_user efgh 4 male Blakcsburg 
+add_friend abcd efgh
+add_firend efgh abcd
+delete_user abcd
+delete_friend abcd efgh
+exit_program

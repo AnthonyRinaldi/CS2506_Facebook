@@ -1,0 +1,21 @@
+add_user juan 19 male Blacksburg
+add_user pablo 19 male Blacksburg
+add_user martinez 19 male Blacksburg
+add_user britney 20 female Blacksburg
+add_user emma 22 female manhanttan
+add_friend juan pablo
+add_friend pablo martinez
+add_friend martinez juan
+add_friend britney juan
+add_friend emma britney
+add_friend emma pablo
+add_friend martinez britney
+display_graph
+suggest_friends pablo
+suggest_friends martinez
+display_friends
+delete_user juan
+delete_friend pablo martinez
+delete_friend emma britney
+display_graph
+exit_program

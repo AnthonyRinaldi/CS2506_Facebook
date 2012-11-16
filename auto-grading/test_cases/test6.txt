@@ -1,0 +1,10 @@
+add_user bob 20 male Blacksburg
+add_user bob2 20 female Blacksburg
+add_user bob3 20 female Blacksburg
+add_friend bob2 bob3
+add_friend bob3 bob
+suggest_friends bob2
+display_graph
+delete_friend bob3 bob
+display_graph
+exit_program

@@ -1,0 +1,20 @@
+add_user Testingthisreallylongname 10 male Blacksburg
+add_user Brad 101 male Blacksburg
+add_user Brad -1 male Blacksburg
+add_user Brad 20 hi Blacksburg
+add_user Brad 20 male Testingreallylonglocationname
+add_user Brad 20 male Blacksburg
+add_user Brad 25 male Berlin
+add_user Brad
+add_friend Bob Jane
+add_user U1 20 male Blacksburg
+add_user U2 20 male Blacksburg
+add_friend U1 U2
+add_friend U1 U2
+delete_friend U3 U4
+delete_user 
+delete_user Fakename
+search_users notkeyword Test
+search_users gender neitherMorF
+notacommand Brad 20 male Blacksburg
+exit_program

@@ -1,0 +1,42 @@
+add_user JanetWeiss 25 female Denton
+add_user BradMajors 27 male Denton
+add_user RalphHaphschat 28 male Denton
+add_user BettyMonroe 26 female Denton
+add_user Frank 34 male Transylvania
+add_user RockyHorror 1 male Castle
+add_user RiffRaff 40 male Transylvania
+add_user Magenta 44 female Transylvania
+add_user Columbia 36 female Castle
+add_user Eddie 42 male Freezer
+add_user DrVonScott 56 male Denton
+add_user Criminologist 57 male Undisclosed
+display_friends BradMajors
+display_graph
+search_users location Denton
+search_users name Frank
+search_users location Transylvania
+search_users location Castle
+add_friend RalphHaphschat BettyMonroe
+add_friend BradMajors JanetWeiss
+add_friend RiffRaff Magenta
+add_friend Eddie Columbia
+add_friend Frank RiffRaff
+add_friend Frank Columbia
+add_friend Frank Magenta
+add_friend Frank RockyHorror
+add_friend Frank JanetWeiss
+add_friend JanetWeiss RockyHorror
+add_friend JanetWeiss BradMajors
+add_friend BradMajors DrVonScott
+add_friend JanetWeiss DrVonScott
+add_friend DrVonScott Eddie
+display_graph
+delete_user Eddie
+display_graph
+suggest_friends BradMajors
+suggest_friends Criminologist
+delete_user Columbia
+delete_user Frank
+delete_user RockyHorror
+display_graph
+exit_program

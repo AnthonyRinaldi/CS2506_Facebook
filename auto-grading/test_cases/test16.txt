@@ -1,0 +1,6 @@
+add_user harry 22 male Hogwarts
+add_user ron 22 male Hogwarts
+add_friend harry ron
+display_friends harry
+display_friends ron
+exit_program

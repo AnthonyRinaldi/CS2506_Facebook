@@ -19,6 +19,7 @@ struct friendNode
 	struct node *user;
 };
 
+void addFriend(struct node **q, struct friendNode **f);
 void appendF(struct node **q, struct node **r);
 int isFriends(struct node **q, struct node **r);
 
@@ -29,6 +30,6 @@ void display(struct node *);
 int count(struct node *);
 void delete(struct node **, char*, char*, int, int);
 struct node * find(struct node *q, char* n, char* l, int g, int a);
-struct node * findName(struct node **q, char* n);
+struct node * findName(struct node *q, char* n);
 
 #endif

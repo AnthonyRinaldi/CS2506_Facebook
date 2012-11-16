@@ -1,0 +1,5 @@
+add_user Bob -20 male vt
+add_user Jim 2.3 male vt
+add_user Sal 105 male vt
+add_user Dave 0 male vt
+exit_program

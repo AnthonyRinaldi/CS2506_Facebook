@@ -1,0 +1,10 @@
+add_user franklin 20 male blacksburg
+add_user robert 20 male blacksburg
+add_user amy 20 female blacksburg
+add_friend franklin robert
+search_user *bert
+search_users name franklin
+search_users name *lin
+search_users name .ranklin
+search_users name "franklin"
+exit_program

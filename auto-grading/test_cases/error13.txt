@@ -1,0 +1,2 @@
+search_users abcd
+exit_program

@@ -1,0 +1,6 @@
+add_users bob 20 male blacksburg
+add_user bob 20 males blacksburg
+add_friends make bob
+add_user kayle 5 male here
+suggest_friends kayles
+exit_program

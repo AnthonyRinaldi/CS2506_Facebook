@@ -1,0 +1,22 @@
+add_user sirozha 30 male minsk
+add_user sasha 30 male minsk
+add_user dori 22 female omsk
+add_user dima 44 male moskva
+add_user girlgamer 16 female saopaulo
+add_user thatfeelwhennogf 25 male warsaw
+add_friend sirozha dori
+add_friend sirozha sasha
+add_friend sirozha dima
+add_friend dima girlgamer
+add_friend sasha girlgamer
+delete_friend sirozha dori
+delete_user dori
+display_friends sirozha
+search_users location moskva
+search_users name dima
+search_users age 16
+search_users gender female
+suggest_friends sirozha
+suggest_friends sasha
+display_graph
+exit_program

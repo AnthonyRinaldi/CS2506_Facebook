@@ -1,0 +1,7 @@
+add_user Daniel 20 male Blacksburg
+add_user Daniell 20 male Blacksburg
+add_user Daniel 20 male Warrenton
+add_user Daniell 20 male Warrenton
+add_user daniel 21 male Warrenton
+add_user daniell 21 male Warrenton
+exit_program

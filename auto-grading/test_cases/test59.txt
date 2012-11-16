@@ -1,0 +1,27 @@
+display_graph
+add_user one 18 male richmond
+add_user two 18 female blacksburg
+add_user three 18 male dc
+suggest_friends one
+add_friend one two
+add_friend one two
+display_graph
+search_users age 18
+search_users location dc
+delete_user three
+search_users location dc
+add_user one 21 female reston
+add_user three 21 female reston
+add_user Amy 17 female henrico
+add_user Julie 20 female richmond
+add_user Natalie 23 female chesterfield
+add_friend Amy Julie
+add_user Justin 19 male henrico
+add_friend Natalie Julie
+add_friend Natalie Justin
+add_user Michael 18 male newkent
+add_friend Michael Justin
+add_friend Michael Amy
+add_friend Justin Amy
+display_graph
+exit_program

@@ -1,0 +1,3 @@
+add_user bob 20 male Blacksburg
+add_user Bob 20 male Blacksburg
+exit_program

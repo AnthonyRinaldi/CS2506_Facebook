@@ -1,0 +1,10 @@
+add_user jim 40 male home
+suggest_friends jim
+add_user jim 30 male vt
+add_user jess 21 female VT
+add_friend jess jim
+display_friends jess
+add_friend jess jim
+add_friend jim jess
+display_graph
+exit_program

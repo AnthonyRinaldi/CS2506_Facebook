@@ -1,0 +1,6 @@
+add_user user1 15 both hi
+add_user user1 15 male zimbabwe
+add_user user1 17 female blacksburg
+add_user user2 12 male charlottesville
+delete_friend user1 user2
+exit_program

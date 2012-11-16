@@ -1,0 +1,15 @@
+add_user tyler 21 male Richmond
+add_user ritchie 21 male GlenAllen
+add_friend tyler ritchie
+add_user germain 21 male Blacksburg
+delete_user germain
+add_user girl 21 female Blacksburg
+suggest_friends ritchie
+display_graph
+display_friends girl
+search_users age 21
+search_users name ritchie
+search_users gender male
+search_users location Blacksburg
+display_graph
+exit_program

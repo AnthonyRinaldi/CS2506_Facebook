@@ -1,0 +1,38 @@
+add_user Red 11 male barn
+add_user Orange 22 female rock
+add_user Yellow 33 male rock
+add_user Green 33 female beach
+add_user blue 44 female desert
+add_user purple 55 male desert
+add_user black 33 male woodlands
+add_user white 22 female barn
+add_user gold 66 female beach
+add_user rainbow 11 female farm
+display_graph
+add_friend rainbow purple
+add_friend rainbow red
+add_friend rainbow blue
+add_friend Red black
+add_friend Red green
+add_friend purple gold
+add_friend Orange white
+add_friend Yellow blue
+add_friend Red white
+add_friend Orange black
+add_friend blue purple
+display_graph
+suggest_friends blue
+suggest_friends purple
+suggest_friends white
+display_friends Red
+display_friends rainbow
+search_users location desert
+search_users gender female
+search_users age 33
+search_users name gold
+delete_user Orange
+delete_friend Red black
+delete_friend rainbow blue
+delete_user rainbow
+display_graph
+exit_program

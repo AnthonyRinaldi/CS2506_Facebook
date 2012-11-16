@@ -1,0 +1,3 @@
+search_users user1
+search_users name user1
+exit_program

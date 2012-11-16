@@ -2,5 +2,4 @@ add_user test1 18 male loc
 add_user test2 18 male loc
 display_graph
 add_friend test1 test2
-display_graph
-end_program
+exit_program

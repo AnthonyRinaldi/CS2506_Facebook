@@ -1,0 +1,33 @@
+add_user peter 47 male spoonerStr
+add_user lois 45 female rhodeIsland
+add_user stewie 4 male house
+add_user meg 16 female jamesWoodsHigh
+add_user Chris 18 male quahog
+add_user brian 6 male quahog
+add_friend peter lois
+add_friend peter stewie
+add_friend stewie lois
+add_friend peter brian
+add_friend Stewie Brian
+add_friend lois chris
+add_friend chris brian
+add_friend peter lois
+add_friend peter joe
+display_graph
+suggest_friends chris
+add_user cleveland 44 male virginia
+add_friend peter cleveland
+display_friends peter
+suggest_friends lois
+delete_user cleveland
+display_friends peter
+search_users location quahog
+search_users name peter
+search_users name cleveland
+search_users age 4
+search_users gender female
+add_friend chris meg
+delete_friend chris meg
+display_friends chris
+display_graph
+exit_program

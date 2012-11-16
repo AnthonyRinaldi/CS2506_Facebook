@@ -1,0 +1,22 @@
+add_user Andrew 20 male Blacksburg
+add_user Brandon 21 male Blacksburg
+add_user Cheryl 19 female Christiansburg
+add_user Dan 30 male Richmond
+add_user Ellen 20 female Fairfax
+add_user Felicia 25 female Roanoke
+search_users gender male
+search_users gender female
+search_users name Andrew
+search_users name Brandon
+search_users name Cheryl
+search_users name Dan
+search_users name Ellen
+search_users name Felicia
+serach_users name Garrett
+search_users location Blacksburg
+search_users location Fairfax
+search_users location Hampton
+search_users age 20
+search_users age 25
+search_users age 50
+exit_program

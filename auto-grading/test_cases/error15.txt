@@ -1,0 +1,5 @@
+add_user name 20 error location
+add_user name -50 male location
+add_user name 60 male
+add_us
+exit_program

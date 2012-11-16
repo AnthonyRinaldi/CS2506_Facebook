@@ -1,0 +1,6 @@
+add_user abc m asdf
+delete_friend abc 
+add_friend cd am
+search_users location somewhere
+suggest_friends 324
+exit_program

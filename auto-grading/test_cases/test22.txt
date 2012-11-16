@@ -1,0 +1,29 @@
+add_user One 21 male b
+add_user Two 22 male b
+add_user Three 23 female b
+add_user Four 24 female c
+add_user Five 25 female c
+add_user Six 26 male c
+add_user Seven 27 male dfdgdfg
+add_user Eight 28 female c
+add_user Nine 29 male d
+add_user Ten 30 male d
+add_friend One Two
+add_friend Two Three
+add_friend Two Ten
+add_friend Two Six
+add_friend Ten Five
+add_friend Six Four
+display_graph
+display_friends Two
+display_friends Seven
+add_friend Seven Two
+display_friends Seven
+search_users location b
+search_users age 30
+search_users gender male
+suggest_friends Seven
+delete_user Two
+delete_friend Six Four
+display_graph
+exit_program

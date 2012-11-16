@@ -1,0 +1,6 @@
+add_friend abcd 14
+delete_friend abcd
+add_friend ab cd
+search_users location bbrg
+suggest_friends 123
+exit_program

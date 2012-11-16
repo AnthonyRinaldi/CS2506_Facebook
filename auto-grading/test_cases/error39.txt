@@ -1,0 +1,42 @@
+non_exist_command
+non_exist_command lol
+add_user u1 1 male address1
+add_user u2 1 male address1
+add_user u3 1 male address1
+add_user u4 1 male address1
+add_friend
+add_friend me
+add_friend u1 u5
+add_friend u5 u1
+add_friend u1 u2
+add_friend u1 u2
+add_friend u3 u4
+add_friend u4 u3
+add_friend @u1 u5
+add_friend u1 ?u5
+delete_user
+delete_user me
+delete_user me u1
+delete_user u4
+delete_user u4
+display_friends 
+display_friends me
+display_friends me u1
+display_friends ?me
+search_users
+search_users name
+search_users ?name
+search_users username
+search_users username 1
+search_users gender guy
+search_users age a
+search_users age 122
+search_users name abcdeabcdeabcdeabcde22
+search_users location 01234567890123456789000
+suggest_friends
+suggest_friends me
+suggest_friends me u1
+exit_programmmmm
+exit_program hello
+add_friend newfriend
+exit_program

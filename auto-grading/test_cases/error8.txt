@@ -1,0 +1,3 @@
+add_user jeb 20 male blacksburg
+add_friend jeb jeb
+exit_program

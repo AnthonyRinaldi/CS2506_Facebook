@@ -1,0 +1,22 @@
+add_user A 20 male Z
+add_user B 21 male Z
+add_user C 32 male Z
+add_user D 32 female Y
+add_user E 21 female Z
+add_user e 22 female Z
+add_user E 21 female z
+add_user F 82 male Y
+add_user G 21 male z
+display_graph
+suggest_friends A
+add_friend A B
+add_friend D F
+add_friend F G
+add_friend D C
+add_friend C E
+display_graph
+suggest_friends D
+suggest_friends F
+search_users location z
+search_users location Z
+exit_program

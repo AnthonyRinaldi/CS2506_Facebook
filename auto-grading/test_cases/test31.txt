@@ -1,0 +1,20 @@
+add_user Brad 20 male Blacksburg
+add_user Edna 20 female Bristol
+add_user Cassidy 20 female Bristol
+add_user Dan 20 male Blacksburg
+add_user BillyBob 15 male Norfolk
+display_graph
+add_friend Brad Dan
+add_friend Edna Cassidy
+add_friend Brad BillyBob
+display_graph
+delete_friend Brad BillyBob
+display_graph
+delete_user BillyBob
+search_users location Bristol
+delete_user Brad
+delete_user Cassidy
+delete_user Edna
+delete_user Dan
+display_graph
+exit_program

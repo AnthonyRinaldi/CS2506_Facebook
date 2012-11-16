@@ -1,0 +1,22 @@
+display_graph
+add_user Guy 23 male VT
+add_user Girl 22 female VT
+add_user Guy2 24 male VT
+add_friend Guy Girl
+add_friend Guy Guy2
+add_friend Girl Guy2
+display_graph
+suggest_friends Guy
+add_user Girl2 20 female VT
+suggest_friends Girl2
+suggest_friends Guy
+add_friend Girl2 Guy2
+suggest_friends Guy
+delete_friend Guy Girl
+delete_user Guy2
+display_graph
+search_users location VT
+search_users age 22
+search_users gender female
+search_users name Guy
+exit_program

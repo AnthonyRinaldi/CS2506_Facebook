@@ -1,0 +1,6 @@
+add_user bob 20 male town
+suggest_friends bob
+add_user phil 19 male town
+suggest_friends bob
+add_user jane -12 female city
+exit_program

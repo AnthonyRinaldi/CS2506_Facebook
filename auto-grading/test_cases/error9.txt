@@ -1,0 +1,6 @@
+add_friend tyler 14
+add_user tyler 21 male Richmond
+add_user ritchie 21 male GlenAllen
+add_friend tyler ritchie
+remove_user germain
+exit_program

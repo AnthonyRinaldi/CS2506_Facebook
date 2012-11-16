@@ -1,0 +1,4 @@
+add_user B*b 20 male Blacksburg
+add_user bob 20 male Blacksburg
+add_friends
+exit_program

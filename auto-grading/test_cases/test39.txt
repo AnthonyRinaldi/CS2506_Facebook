@@ -1,0 +1,6 @@
+add_user Han 35 male Cantina
+add_user Luke 30 male Cantina
+add_user Leia 30 female DS
+add_friend luke han
+suggest_friends han
+exit_program

@@ -1,0 +1,17 @@
+add_user katniss 16 female district12
+add_user peeta 16 male district12
+add_user gale 18 male district12
+add_friend katniss peeta
+add_user rue 12 female district11
+search_users location district12
+add_friend katniss rue
+add_user prim 12 female district12
+add_friend prim katniss
+add_friend gale prim
+display_graph
+suggest_friends katniss
+delete_user peeta
+display_friends katniss
+add_friend katniss gale
+display_graph
+exit_program

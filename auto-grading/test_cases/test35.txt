@@ -1,0 +1,15 @@
+add_user name1 19 male burg
+add_user name2 20 male cville
+add_friend name1 name2
+display_graph
+add_user hunter 21 male bedford
+add_friend david hunter
+display_graph
+suggest_friends timmy
+add_user name3 24 female boston
+add_friend name3 name1
+suggest_friends name3
+display_graph
+add_user name4 30 male nova
+display_graph
+exit_program

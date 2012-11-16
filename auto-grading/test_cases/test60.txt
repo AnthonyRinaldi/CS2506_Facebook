@@ -1,0 +1,43 @@
+add_user ethan 22 male blacksburg
+add_user james 27 male blacksburg
+add_user johnny 33 male fairfax
+add_user sam 33 male blacksburg
+add_user jolie 33 female LA
+add_user angelina 33 female LA
+add_user scarlett 27 female LA
+add_user jenny 19 female blacksburg
+add_user jennifer 72 female blacksburg
+display_graph
+add_friend ethan jenny
+add_friend johnny james
+add_friend jenny jennifer
+add_friend jenny johnny
+display_graph
+display_friends jenny
+display_friends ethan
+display_friends jolie
+display_friends james
+search_users name ethan
+search_users location blacksburg
+search_users location LA
+search_users age 22
+search_users age 27
+search_users age 33
+search_users gender male
+search_users gender female
+suggest_friends angelina
+suggest_friends jenny
+suggest_friends sam
+suggest_friends ethan
+display_friends johnny
+delete_friend johnny james
+display_friends johnny
+delete_friend johnny jenny
+display_friends johnny
+delete_user jennifer
+display_graph
+delete_user jenny
+display_graph
+delete_user ethan
+display_graph
+exit_program

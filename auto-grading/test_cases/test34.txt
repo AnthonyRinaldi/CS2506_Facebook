@@ -1,0 +1,23 @@
+add_user Church 30 male BlueBase
+add_user Caboose 28 male BlueBase
+add_user Tex 29 female canyon
+add_user Vic 34 male Command
+add_user Sarge 35 male RedBase
+add_user Grif 27 male RedBase
+add_friend Church Caboose
+add_friend Church Tex
+add_friend Church Vic
+add_friend Sarge Vic
+add_friend Sarge Grif
+display_graph
+suggest_friends Vic
+suggest_friend Sarge
+display_friends Caboose
+display_friends Church
+search_users gender female
+search_users location RedBase
+delete_user Tex
+delete_user Vic
+delete_friend Church Caboose
+display_graph
+exit_program

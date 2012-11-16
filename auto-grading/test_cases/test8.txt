@@ -1,0 +1,6 @@
+add_user Bob 21 male Blacksburg
+search_users name bob
+search_users location blacksburg
+search_users location Blacksburg
+search_users gender male
+exit_program

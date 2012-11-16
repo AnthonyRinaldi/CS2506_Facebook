@@ -1,0 +1,28 @@
+add_user Sean 22 male bburg
+add_user Miles 21 male bburg
+add_user Mimi 20 female bburg
+add_user Kelly 22 cville
+add_user Nicole 21 female hburg
+add_user Cory 21 male bburg
+add_user Matt 21 male wash
+add_user Nick 21 male bburg
+add_user Alison 21 female burg
+add_friend Sean Miles
+add_friend Sean Mimi
+add_friend Sean Kelly
+add_friend Sean Nicole
+add_friend Sean Cory
+add_friend Sean Matt
+add_friend Sean Nick
+add_friend Sean Alison
+add_friend Alison Miles
+add_friend Alison Mimi
+add_friend Alison Cory
+add_friend Nick Cory
+add_friend Matt Kelly
+add_friend Matt Nicole
+add_friend Cory Miles
+add_friend Cory Mimi
+add_friend Kelly Nicole
+display_graph
+exit_program

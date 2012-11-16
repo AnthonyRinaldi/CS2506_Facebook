@@ -1,0 +1,8 @@
+add_user paul
+add_user paul -20
+add_user paul 20
+add_user paul 20 alien
+add_user paul 20 male
+add_user paul 20 male !@#$
+add_user paul 20 male cowville
+exit_program

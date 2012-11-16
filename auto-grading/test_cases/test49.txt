@@ -1,0 +1,12 @@
+add_user Shane 35 male Atlanta
+add_user Lori 30 female Atlanta
+add_user ZOMBIE 1 male Atlanta
+display_friends zombie
+add_friend lori shane
+add_user Rick 36 male Atlanta
+add_friend rick lori
+add_friend RICk shane
+display_graph rick
+delete_user rick
+display_graph lori
+exit_program

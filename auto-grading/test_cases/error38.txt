@@ -1,0 +1,16 @@
+add_user michael phelps 23 male USA
+add_user michael 400 male USA
+add_user +-=? 23 male USA
+add_user michael 23 mal USA
+add_user michael 23 male 123456789012345678901111111
+add_user michael 23 male USA
+add_friend michael tom
+add_user tom 23 male USA
+add_friend michael tom max
+delete_user max
+delete_friend michael max
+search_users location 1 2
+search_users 1 2
+search_users age ab
+search_users gender abc
+exit_program

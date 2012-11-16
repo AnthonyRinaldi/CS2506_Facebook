@@ -1,0 +1,14 @@
+add_user david 19 male fairfax
+display_graph
+add_user timmy 20 male mclean
+add_friend david timmy
+display_graph
+add_user hunter 21 male bedford
+add_friend david hunter
+display_graph
+suggest_friends timmy
+add_user liz 19 female lynchburg
+add_friend david liz
+suggest_friends timmy
+display_graph
+exit_program

@@ -1,0 +1,7 @@
+add_user tedmosby 34 male NY
+add_user barneystinson 35 male NY
+search_users location NY
+search_users age 34
+search_users gender male
+search_users name tedmosby
+exit_program

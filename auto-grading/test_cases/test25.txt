@@ -1,0 +1,16 @@
+add_user phil 20 male town
+add_user jane 19 female town
+add_user frank 25 male city
+add_user mary 22 female city
+add_friend phil frank
+add_friend jane frank
+add_friend mary frank
+suggest_friends mary
+add_friend mary phil
+display_graph
+delete_friend mary phil
+suggest_friends mary
+delete_user mary
+delete_user frank
+display_graph
+exit_program

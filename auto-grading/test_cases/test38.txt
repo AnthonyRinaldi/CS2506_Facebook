@@ -1,0 +1,13 @@
+add_user test 18 male here
+add_user admin 19 male there
+add_friend test admin
+add_user okay -1 female why
+add_user three 1 male why
+add_friend three test
+add_friend three adnim
+display_graph
+add_user why 84 female okay
+suggest_friends why
+add_friend why three
+suggest_friends why
+exit_program

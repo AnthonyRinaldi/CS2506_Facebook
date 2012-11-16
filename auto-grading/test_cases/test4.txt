@@ -1,0 +1,32 @@
+add_user bob 23 male room1
+add_user jim 21 male room2
+add_user dave 25 male room3
+add_user nick 21 male room4
+add_user sally 22 female room5
+add_user rachel 34 female room6
+add_user amanda 21 female room7
+add_user kristen 43 female room8
+add_friend bob jim
+add_friend bob dave
+add_friend bob sally
+add_friend jim rachel
+add_friend jim amanda
+add_friend jim sally
+add_friend jim kristen
+add_friend dave nick
+add_friend nick amanda
+add_friend rachel kristen
+add_friend amanda kristen
+suggest_friends jim
+suggest_friends bob
+display_graph
+display_friends bob
+delete_user dave
+display_friends bob
+delete_friend bob sally
+display_friends bob
+search_users location room1
+search_users name bob
+search_users age 21
+search_users gender male
+exit_program

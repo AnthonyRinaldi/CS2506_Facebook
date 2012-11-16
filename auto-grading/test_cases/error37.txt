@@ -1,0 +1,6 @@
+add_user austin 15 male warrenton
+add_user jane 11 female bburg
+add_friend austin jane
+delete_user jane
+add_friend austin jane
+exit_program

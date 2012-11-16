@@ -1,0 +1,5 @@
+display_graph
+add_user bob 24 male home
+display_graph
+add_friend bob jill
+exit_program

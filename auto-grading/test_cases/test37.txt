@@ -1,0 +1,10 @@
+add_user Derek 22 male Blacksburg
+add_user Dustin 22 male Franklin
+add_user Jessica 31 female Hollywood
+add_friend derek dustin
+add_friend dustin jessica
+suggest_friends derek
+display_graph
+delete_friend derek dustin
+display_graph
+exit_program

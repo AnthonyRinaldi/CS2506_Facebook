@@ -1,0 +1,22 @@
+add_user Jon 20 male Blacksburg
+add_user Max 18 male Houston
+add_friend Jon Max
+add_user Katya 19 female blacksburg
+add_friend Katya Max
+add_user James 20 male blacksburg
+add_user zack 22 male blacksburg
+add_user Sara 20 female Blacksburg
+display_friends Katya
+add_friend zack Jon
+add_friend zack James
+add_friend Max katya
+add_friend James sara
+display_graph
+suggest_friends Jon
+search_users location Blacksburg
+search_users name zack
+delete_friend jon max
+display_graph
+delete_user zack
+display_friends Jon
+exit_program

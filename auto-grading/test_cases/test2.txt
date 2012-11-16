@@ -1,0 +1,9 @@
+add_user daniel 20 male blacksburg
+add_user Danielle 20 female Blacksburg
+search_users name daniel
+search_users name Daniel
+search_users name danielle
+search_users name Danielle
+search_users location blacksburg
+search_users location Blacksburg
+exit_program

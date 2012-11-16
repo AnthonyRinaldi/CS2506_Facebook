@@ -1,0 +1,26 @@
+add_user Fire 22 male Nation1
+add_user Water 21 female Nation2
+add_user Earth 20 male Nation3
+add_user Wind 22 male Nation4
+add_user Dark 21 female Nation5
+add_user Light 20 male Nation6
+add_friend Fire Water
+add_friend Fire Wind
+add_friend Fire Dark
+add_friend Earth Wind
+add_friend Earth Dark
+add_friend Dark Light
+add_friend Light Fire
+suggest_friends Fire
+suggest_friends Earth
+display_graph
+display_friends Fire
+delete_user Wind
+display_friends Fire
+delete_friend Fire Water
+display_friends Water
+search_users name Light
+search_users age 22
+search_users gender male
+search_users location Nation3
+exit_program

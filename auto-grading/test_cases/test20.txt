@@ -1,0 +1,11 @@
+add_user name1 20 male location
+add_user name2 20 male location
+add_user name3 20 female location
+add_friend name1 name2
+add_friend name1 name3
+display_graph
+add_friend name2 name3
+display_graph
+delete_user name2
+display_graph
+exit_program

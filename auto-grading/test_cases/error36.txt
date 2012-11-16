@@ -1,0 +1,37 @@
+derp_command asdf asdf asdf
+derp_command
+add_user possum -1 male forrest
+add_user possum 14 gerbal forrest
+add_user possum 14 male
+add_user possum 14 forrest
+add_user possum male forrest
+add_user 14 male forrest
+add_user dog 7 male doghouse
+add_user cat 3 female bed
+add_user bear 13 male forrest
+add_user rabbit 3 female forrest
+search_users location
+search_users barn mars
+search_users name
+search_users 
+search_users age -3
+search_users age 1003
+search_users age
+search_users gender
+search_users gender berp
+suggest_friends
+suggest_friends derp
+add_friend bear derp
+add_friend derp cat
+add_friend derp derper
+add_friend
+suggest_friends derp
+suggest_friends
+delete_friend
+delete_friend derp
+delete_friend derp derper
+delete_friend derp cat
+delete_friend cat derp
+delete_user
+delete_user derp
+exit_program

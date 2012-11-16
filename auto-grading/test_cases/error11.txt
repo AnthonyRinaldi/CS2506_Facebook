@@ -1,0 +1,4 @@
+search_user location springfield
+add_user bartsimpson 10 M springfield
+delete_friend lisasimpson maggiesimpson
+exit_program

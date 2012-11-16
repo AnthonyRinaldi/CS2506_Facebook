@@ -1,0 +1,10 @@
+add_user Wash 40 male Serenity
+add_user Malcolm 40 male Serenity
+add_user Zoe 40 female Serenity
+add_friend Wash Malcolm
+add_friend Malcolm Zoe
+search_user gender male
+suggest_friend Wash
+display_graph
+delete_user Wash
+exit_program

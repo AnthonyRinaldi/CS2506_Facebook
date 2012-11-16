@@ -1,0 +1,5 @@
+add_user Doug 21 male house
+add_user Sass 20 female House
+add_user man 19 male housE
+search_users location house
+exit_program

@@ -1,0 +1,8 @@
+add_user Jon 20 male Blacksburg
+add_user Max 18 male Houston
+add_friend Jon Max
+add_user Katya 19 female blacksburg
+add_friend Katya Max
+add_user James 20 male blacksburg
+add_friend James zack
+exit_program

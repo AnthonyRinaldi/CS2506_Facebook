@@ -1,0 +1,13 @@
+add_user franklin 20 male blacksburg
+add_user robert 20 male blacksburg
+add_user david 21 male blacksburg
+add_user richard 20 male blacksburg
+add_friend franklin richard
+add_friend robert franklin
+add_friend david franklin
+suggest_friends franklin
+add_user amy 20 female blacksburg
+add_friends amy robert
+add_friend amy robert
+suggest_friends franklin
+exit_program

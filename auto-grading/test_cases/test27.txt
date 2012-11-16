@@ -1,0 +1,5 @@
+add_user batman 38 male gotham
+add_user robin 23 male gotham
+add_user joker 35 male gotham
+search_users location gotham
+exit_program

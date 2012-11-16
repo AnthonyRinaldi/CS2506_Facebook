@@ -1,0 +1,16 @@
+display_graph
+add_user Jeff 41 Male Greendale
+add_user Abed 21 Male Greendale
+add_friend Jeff Abed
+display_graph
+add_user Annie 18 Female Greendale
+search_users location Greendale
+search_users name Annie
+search_users age 18
+display_friends Annie
+suggest_friends Annie
+add_friend Jeff Annie
+delete_user Annie
+display_friends Jeff
+display_graph
+exit_program

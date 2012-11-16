@@ -1,0 +1,30 @@
+add_user dell 15 male tree
+add_user apple 20 male tree
+add_user intel 12 male pine
+add_user macbook 25 male tree
+add_user hp 27 male tree
+add_user toshiba 15 male pine
+add_user processor 20 male tree
+add_user fujitsu 35 male pop
+add_user amd 55 male tree
+add_friend dell apple
+add_friend apple macbook
+add_friend intel amd
+add_friend processor fujitsu
+add_friend dell hp
+add_friend hp intel
+add_friend amd fujitsu
+add_friend apple amd
+add_friend dell amd
+add_friend processor dell
+add_friend processor apple
+display_graph
+suggest_friends processor
+suggest_friends amd
+suggest_friends hp
+display_friends amd
+search_friends dell
+delete_friend dell hp
+delete_user dell
+display_graph
+exit_program

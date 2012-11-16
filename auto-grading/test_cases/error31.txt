@@ -1,0 +1,7 @@
+add_user shouldntwork 50000 male otherplace
+add_user stillshouldnt 50 ambiguous overthere
+suggest_friends imnotreal
+delete_user someguy
+search_users location nowhere
+search_users age pie
+exit_program

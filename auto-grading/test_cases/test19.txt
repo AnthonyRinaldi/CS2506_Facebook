@@ -1,0 +1,22 @@
+add_user Cow 23 female BB
+add_user Man 22 male BB
+add_user House 100 male Riverside
+add_friend House Man
+add_friend House Cow
+add_friend Cow Man
+delete_friend House Man
+add_user bROWNcOW 23 male bb
+add_friend House bROWNcOW
+add_friend Man bROWNcOW
+add_friend Cow bROWNcOW
+display_friends bROWNcOW
+search_users location Riverside
+search_users age 23
+search_users gender male
+add_user NEWUSER 23 male Cali
+add_friend NEWUSER bROWNcOW
+suggest_friends NEWUSER
+display_graph
+delete_user bROWNcOW
+display_graph
+exit_program

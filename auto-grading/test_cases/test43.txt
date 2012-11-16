@@ -1,0 +1,34 @@
+add_user Daniel 20 male Blacksburg
+display_friends Daniel
+search_users name Daniel
+display_graph
+add_user Chris 20 male Blacksburg
+display_friends Chris
+search_users gender male
+search_users name Chris
+display_graph 
+add_friend Daniel Chris
+display_friends Daniel
+display_friends Chris
+display_graph
+delete_friend Daniel Chris
+display_friends Daniel
+display_friends Chris
+display_graph
+add_friend Chris Daniel
+delete_user Chris
+display_friends Daniel
+display_friends Chris
+add_user Mike 20 male Blacksburg
+add_user Derek 21 male Blacksburg
+add_friend Daniel Mike
+add_friend Derek Daniel
+display_graph
+add_user Prabh 19 male Blacksburg
+add_friend Daniel Prabh
+delete_friend Mike Daniel
+add_friend Daniel Mike
+display_graph
+delete_user Daniel
+display_graph
+exit_program

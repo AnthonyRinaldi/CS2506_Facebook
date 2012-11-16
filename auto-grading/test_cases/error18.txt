@@ -1,0 +1,4 @@
+add_user Test 23 male Blacksburg
+add_friend Test Sarah
+delete_friend Test Sarah
+exit_program

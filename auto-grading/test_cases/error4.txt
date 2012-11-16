@@ -1,0 +1,6 @@
+delete_friend abc
+add_friend 123
+add_user Test 55 123 bb
+add_user Test 55 male bb
+suggest_friends Test
+exit_program

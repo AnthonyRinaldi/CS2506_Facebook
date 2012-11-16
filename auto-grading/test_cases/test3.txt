@@ -1,0 +1,25 @@
+add_user red 1 male room
+add_user blue 2 male room
+add_user yellow 3 female hall
+add_user pink 4 female room
+add_friend red blue
+add_friend blue yellow
+suggest_friends pink
+add_friend red yellow
+add_friend red pink
+display_friends red
+display_friends pink
+display_graph
+add_user white 3 female hall
+suggest_friends white
+add_friend white red
+display_graph
+delete_friend red blue
+display_friends red
+search_users location hall
+search_users age 2
+search_users gender female
+search_users name red
+delete_user red
+display_graph
+exit_program

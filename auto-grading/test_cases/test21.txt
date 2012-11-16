@@ -1,0 +1,13 @@
+display_graph
+add_user user1 21 male place1
+search_users name user1
+add_user user2 22 male place1
+search_users name user2
+add_friend user1 user2
+display_graph
+add_user user3 23 male place3
+search_users name user3
+add_friend user1 user3
+add_friend user2 user3
+display_graph
+exit_program

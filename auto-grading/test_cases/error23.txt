@@ -1,0 +1,18 @@
+add_user 
+add_user !!!!!!!!!!!!!!!!!!!!! 1 male here
+add_user matt -1 male there
+add_user matt 2 Male up
+add_user matt 2 male aaaaaaaaaaaaaaaaaaaaaaaa
+add_friend 1
+delete_friend 1
+delete_user 
+display_friends
+display_friends 
+display_friends bob
+search_users 1 2 3 4 
+search_users location name age gender
+search_users name location
+search_users gender 1
+suggest_friends 
+suggest_friends 1
+exit_program

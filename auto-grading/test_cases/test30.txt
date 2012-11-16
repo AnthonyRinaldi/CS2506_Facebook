@@ -1,0 +1,41 @@
+add_user Susan 0 female usa
+add_user Susan 30 Female usa
+add_user Susan 30 female USA
+add_user Susan 30 female USA
+add_user Sarah 25 female Canada
+add_user John 20 male Texas
+add_friend Susan John
+add_friend Susan John
+add_friend John Adam
+add_friend John Sarah
+delete_friend Sarah Susan
+delete_friend John Susan
+add_friend John Susan
+display_friends Susan
+display_friends John
+add_friend Sarah Susan
+display_friends Susan
+display_friends Sarah
+display_friends John
+add_user Joe 15 male cuba
+search_users name Joe
+search_users gender male
+search_users age 20
+search_users age 21
+suggest_friends Susan
+delete_friend Susan John
+suggest_friends Susan
+add_user Tom 12 male cuba
+add_friend Tom Joe
+add_friend Tom Susan
+suggest_friends joe
+add_user Mary 40 female usa
+suggest_friends tom
+suggest_friends mary
+add_user Peter 40 male usa
+add_user Tommy 40 male usa
+add_friend Joe Tommy
+add_friend Joe Peter
+suggest_friends Mary
+display_graph
+exit_program

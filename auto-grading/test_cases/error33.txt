@@ -1,0 +1,10 @@
+add_friend RT@* 14 male Blacksburg
+delete_friend rat
+add_friend abd 1000
+add_friend aaaaaaaaaaaaaaaaaaaaaaaaaaa 10 male Blacksburg
+add_friend friend1 14 male Blacksburg
+delete_friend friend1 friend1
+delete_user cat
+display_friends dog
+suggest_friends dog
+exit_program

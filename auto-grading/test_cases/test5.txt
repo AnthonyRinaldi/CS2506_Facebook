@@ -1,0 +1,35 @@
+add_user a 23 male a
+add_user b 25 female b
+add_user c 24 male c
+add_user d 24 female d
+add_user e 27 female e
+display_graph
+add_friend a b
+add_friend a c
+add_friend a d
+add_friend a e
+add_friend b c
+add_friend b d
+add_friend a b
+add_friend a c
+add_friend a d
+add_friend c d
+add_friend e d
+display_graph
+suggest_friends e
+suggest_friends d
+suggest_friends c
+display_friends a
+display_friends b
+display_friends e
+search_users location a
+search_users gender male
+search_users age 22
+search_users name a
+display_graph
+delete_user a
+delete_user b
+delete_friend e d
+delete_friend c d
+display_graph
+exit_program

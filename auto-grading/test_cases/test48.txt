@@ -1,0 +1,21 @@
+add_user austin 15 male bburg
+add_user jane 16 female bburg
+add_user mary 22 female bburg
+add_user joe 20 male bburg
+suggest_friends austin
+add_friend austin jane
+add_friend jane mary
+suggest_friends austin
+add_friend joe jane
+suggest_friends jane
+suggest_friends joe
+display_graph
+search_users age 22
+search_users location bburg
+search_users gender male
+search_users name austin
+delete_friend jane mary
+suggest_friends joe
+suggest_friends austin
+display_graph
+exit_program

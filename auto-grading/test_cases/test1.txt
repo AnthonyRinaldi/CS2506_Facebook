@@ -1,0 +1,36 @@
+add_user Apple 23 male tree
+add_user Banana 25 female branch
+add_user jacKFruit 24 male branch
+add_user catfish 24 female sea
+add_user peacock 27 female forest
+add_user tiger 26 male forest
+add_user elephant 24 male zoo
+add_user monkey 25 female tree
+add_user whale 28 female sea
+add_user ChicKen 23 female farm
+add_friend chicken tiger
+add_friend apple elephant
+add_friend tiger whale
+add_friend banana monkey
+add_friend whale catfish
+add_friend jackfruit peacock
+add_friend aPPle elephant
+add_friend apple monkey
+add_friend banana elephant
+add_friend catfish tiger
+add_friend peacock tiger
+display_graph
+suggest_friends peacock
+suggest_friends tiger
+suggest_friends monkey
+display_friends apple
+search_users location forest
+search_users gender female
+search_users age 24
+search_users name whale
+delete_user banana
+delete_user chicken
+delete_friend apple elephant
+delete_friend whale catfish
+display_graph
+exit_program

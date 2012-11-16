@@ -1,0 +1,10 @@
+add_user guy 15 male blacksburg
+add_user girl 16 female christiansburg
+add_user mutualfriend 18 female roanoke
+add_friend guy mutualfriend
+add_friend girl mutualfriend
+suggest_friends guy
+display_graph
+delete_friend guy mutualfriend
+delete_user mutualfriend
+exit_program

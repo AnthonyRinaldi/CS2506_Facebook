@@ -123,6 +123,10 @@ void parse_command(char commStr[], int stringSize)
 			fprintf(out, "Useage: add_user name age gender location\n");
 			// Not enough command parameters
 		}
+		/*else if (findName(root, str1) == NULL)
+		{
+			fprintf(out, "User %s already exists. Please try again.", str1);
+		}*/
 		// TODO: Check if already a user
 		else
 		{
@@ -139,7 +143,7 @@ void parse_command(char commStr[], int stringSize)
 			if (root == NULL)
 				root = add;
 			else*/
-			//fprintf(out, "Add User %s\n", str1);
+			//fprintf(out, "Add User %s\n", str1);		
 			if (strncmp(str2,"male",4) == 0)
 				append(&root, str1, str2, num1, 0);
 			else if (strncmp(str2,"female",6) == 0)
@@ -167,17 +171,24 @@ void parse_command(char commStr[], int stringSize)
 			// TODO: Create friendNode LLIST
 			struct node * fr1;
 			struct node * fr2;
-			fr1 = findName(&root, str1);
-			fr2 = findName(&root, str2);
+			fr1 = findName(root, str1);
+			fr2 = findName(root, str2);
+
+			struct friendNode * q;
+			q = (struct friendNode *) malloc(sizeof(struct friendNode));
+			((*q).user) = fr2;
+			((*q).nextFriend) = NULL;
+			//fprintf(out, "Try to friend: %s and %s\n", fr1->name, fr2->name);
 			
 			// Only friend if they are not yet.
-			if (isFriends(&fr1, &fr2) > 0)
+			//if (isFriends(&fr1, &fr2) == 0)
 			{
-				appendF(&fr1, &fr2);
+				//appendF(&fr1, &fr2);
+				addFriend(&fr1, &q);
 				fprintf(out, "%s and %s are now friends\n", str1, str2);
 			}
-			else
-				fprintf(out, "%s and %s are already friends\n", str1, str2);
+			//else
+			//	fprintf(out, "%s and %s are already friends\n", str1, str2);
 		}
 		
 	}	
@@ -199,22 +210,34 @@ void parse_command(char commStr[], int stringSize)
 			/* EXAMPLE Useage
 			user1 -> user3 -> NULL
 			user2 -> user3 -> NULL
-			user3 -> user1 -> user2 -> NULL
+			user3 -> user(*r)->fr1 -> user2 -> NULL
 			*/
-			struct node *t;
-			t = root;
-			if (t == NULL)
+			struct node **t;
+			t = (struct node **)malloc(sizeof(struct node*));
+			*t = root;
+			if (*t == NULL)
 			{
 				// PRINT EMPTY
 				fprintf(out, "No users present on facebook\n");
 			}
-			else while (t != NULL)
+			else while (*t != NULL)
 			{
 				// Print User
-				fprintf(out, "%s -> ", (*t).name);
-				// TODO: Print friends;
-				fprintf(out, " FRIENDS\n");
-				t = (*t).next;
+				fprintf(out, "%s", (**t).name);
+				// Print friends;
+				//fprintf(out, "FRIENDS\n");
+				// First, check for start.
+				struct friendNode **x;
+				x = (struct friendNode **)malloc(sizeof(struct firendNode*));
+				*x = ((*(**t).fr).nextFriend);
+				while (*x != NULL)
+				{
+					fprintf(out, " -> %s", ((*(**x).user)).name);
+					x = &((**x).nextFriend);
+				}
+				fprintf(out, " -> NULL\n");
+
+				t = &(**t).next;
 			}
 			
 		}

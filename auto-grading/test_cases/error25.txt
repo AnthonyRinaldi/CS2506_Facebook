@@ -1,0 +1,6 @@
+add_user john 20 male blacksburg
+add_friend John !22
+add_friend Joe
+add_user joe 14 male USA
+add_friend john joe
+exit_program

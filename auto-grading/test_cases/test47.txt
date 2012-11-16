@@ -1,0 +1,29 @@
+add_user dog 7 male doghouse
+add_user cat 3 female bed
+add_user bear 13 male forrest
+add_user rabbit 3 female forrest
+search_users location forrest
+search_users location mars
+search_users name cat
+search_users name bat
+search_users age 3
+search_users age 63
+search_users gender male
+search_users gender female
+suggest_friends dog
+suggest_friends cat
+display_graph
+add_friend bear dog
+add_friend bear cat
+display_graph
+suggest_friends dog
+suggest_friends cat
+suggest_friends bear
+delete_friend cat bear
+suggest_friends cat
+suggest_friends bear
+display_graph
+add_friend cat bear
+delete_user bear
+display_graph
+exit_program
