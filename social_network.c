@@ -53,7 +53,7 @@ int main(int argc, char* argv[])
 			fgets(buffer, sizeof(buffer), in) != NULL;
 			//fprintf(out, buffer);
 			parse_command(&buffer, 200);
-		} while (strncmp(buffer, "exit_program",12) != 0);
+		} while (strncmp(buffer, "exit_program",12) != 0 );
 		
 	}
 	else if (argc == 4 && strncmp(argv[1],"-f",2) == 0)
@@ -62,13 +62,12 @@ int main(int argc, char* argv[])
 		in = fopen(argv[2],"r");
 		out = fopen(argv[3],"w");
 		
-		// take the buffer and check it out.
-		do
+		// take the buffer and check it out. Does EOF test, too...
+		while (strncmp(buffer, "exit_program",12) != 0 && fgets(buffer, sizeof(buffer), in) != NULL)
 		{
-			fgets(buffer, sizeof(buffer), in) != NULL;
 			//fprintf(out, buffer);
 			parse_command(&buffer, 200);
-		} while (strncmp(buffer, "exit_program",12) != 0);
+		}
 	}
 	else
 	{
@@ -140,17 +139,17 @@ void parse_command(char commStr[], int stringSize)
 			if (root == NULL)
 				root = add;
 			else*/
-
-			if (str2 == "male")
+			//fprintf(out, "Add User %s\n", str1);
+			if (strncmp(str2,"male",4) == 0)
 				append(&root, str1, str2, num1, 0);
-			else if (str2 == "female")
+			else if (strncmp(str2,"female",6) == 0)
 				append(&root, str1, str2, num1, 1);
 
 			fprintf(out, "%s joined facebook\n", str1);
 		}
 	}
 	// Add Friend
-	else if (strncmp(command,"add_friend ",12) == 0 )
+	else if (strncmp(command,"add_friend",10) == 0 )
 	{
 		int temp = sscanf(commStr, "%s %s %s", command, str1, str2);
 		/*
@@ -166,11 +165,22 @@ void parse_command(char commStr[], int stringSize)
 		{
 			// TODO: Make list sorted
 			// TODO: Create friendNode LLIST
-			findName(root, str1);
-			findName(root, str2);
+			struct node * fr1;
+			struct node * fr2;
+			fr1 = findName(&root, str1);
+			fr2 = findName(&root, str2);
+			
+			// Only friend if they are not yet.
+			if (isFriends(&fr1, &fr2) > 0)
+			{
+				appendF(&fr1, &fr2);
+				fprintf(out, "%s and %s are now friends\n", str1, str2);
+			}
+			else
+				fprintf(out, "%s and %s are already friends\n", str1, str2);
 		}
 		
-	}
+	}	
 	// Display the facebook graph
 	else if (strncmp(command,"display_graph",13) == 0 )
 	{
@@ -203,12 +213,16 @@ void parse_command(char commStr[], int stringSize)
 				// Print User
 				fprintf(out, "%s -> ", (*t).name);
 				// TODO: Print friends;
-				fprintf(out, "\n");
+				fprintf(out, " FRIENDS\n");
 				t = (*t).next;
 			}
 			
 		}
 		
+	}
+	else // Bad command
+	{
+		fprintf(out, "Bad command\n");
 	}
 
 }

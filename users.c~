@@ -1,6 +1,6 @@
 #include "users.h"
 
-/*extern 
+extern 
 
 int adduser(struct user* array[], int freeEntry, char* n, char* l, int g, int a)
 {
@@ -17,4 +17,4 @@ int adduser(struct user* array[], int freeEntry, char* n, char* l, int g, int a)
 void removeuser(int)
 {
 	// TODO: Remove user from file.
-}*/
+}

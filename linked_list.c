@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include "linked_list.h"
 
+extern FILE* out;
+
 /*struct node
 {
 	char* name;
@@ -58,22 +60,77 @@ int main()
 //	return 0;
 //}
 
+// append friend
+// Assumptions: q and r are not NULL
+// Should be handled before
+void appendF(struct node **q, struct node **r)
+{
+	if(*q != NULL && *r != NULL)
+	{
+		// They should point to themselves starting out
+		// Insert rfriend to qfriend,
+		struct friendNode * temp1;
+		struct friendNode * temp2;
+		//temp1 = (struct friendNode *)malloc(sizeof(struct friendNode));
+		//temp2 = (struct friendNode *)malloc(sizeof(struct friendNode));
+		temp1 = (((*q)->fr)->nextFriend);
+		(((*q)->fr)->nextFriend) = (*r)->fr;
+		// then qfriend to rfriend,
+		temp2 = ((*r)->fr)->nextFriend;
+		((*r)->fr)->nextFriend = (*q)->fr;
+	}
+}
+
+// Returns <0 if they are not friends or they are both null, >0 if they are.
+int isFriends(struct node **q, struct node **r)
+{
+	if(*q != NULL && *r != NULL)
+	{
+	struct friendNode * temp1;
+	struct friendNode * start;
+	temp1 = ((*q)->fr);
+	start = ((*q)->fr);
+	do
+	{
+		if (temp1 == temp1)
+			return 1;
+		else
+			temp1 = temp1->nextFriend;
+	}	
+	while (temp1 != start);
+	}
+	else
+	return -1;
+	
+}
+
+//void delF
 
 //Adds a node at the end of the linked list
 void append(struct node **q, char* n, char* l, int g, int a)
 {
 	struct node *temp, *r;
 	temp = *q;
+	struct friendNode * f;
 
 	if(*q == NULL) //If the list is empty, creat first node
 	{
+
+		// DEBUG:
+		//printf("Create First User Node: ");
 		temp = (struct node *)malloc(sizeof(struct node));
+
+		f = (struct friendNode *)malloc(sizeof(struct friendNode));
+		f->user = temp;
+		f->nextFriend = f;
+		temp->fr = f;
 		temp->name = n;
 		temp->location = l;
 		temp->gender = g;
 		temp->age = a;
 		temp->next = NULL;
 		*q = temp;
+		//printf("%s, %d, %d, %s\n", (**q).name, (**q).age, (**q).gender, (**q).location);
 	}
 	else
 	{
@@ -82,13 +139,19 @@ void append(struct node **q, char* n, char* l, int g, int a)
 			temp = temp->next;
 
 		//Add node at the end
+		//printf("Add nth Node: ");
 		r = (struct node *)malloc(sizeof(struct node));
+		f = (struct friendNode *)malloc(sizeof(struct friendNode));
+		f->user = r;
+		f->nextFriend = f;
+		r->fr = f;
 		r->name = n;
 		r->location = l;
 		r->gender = g;
 		r->age = a;
 		r->next = NULL;
 		temp->next = r;
+		//printf("%s, %d, %d, %s\n", (**q).name, (**q).age, (**q).gender, (**q).location);
 	}
 }
 
@@ -97,9 +160,14 @@ void append(struct node **q, char* n, char* l, int g, int a)
 void addatbeg(struct node **q, char* n, char* l, int g, int a)
 {
 	struct node *temp;
+	struct friendNode * f;
 
 	//add a new node
 	temp = (struct node *)malloc(sizeof(struct node));
+	f = (struct friendNode *)malloc(sizeof(struct friendNode));
+	f->user = temp;
+	f->nextFriend = f;
+	temp->fr = f;
 	temp->name = n;
 	temp->location = l;
 	temp->gender = g;
@@ -113,11 +181,16 @@ void addatbeg(struct node **q, char* n, char* l, int g, int a)
 void addafter(struct node *q, char* n, char* l, int g, int a)
 {
 	struct node *temp, *r;
+	struct friendNode * f;
 
 	temp = find(q, n, l, g, a);
 	if(temp != NULL)
 	{
 		r = (struct node *)malloc(sizeof(struct node));
+		f = (struct friendNode *)malloc(sizeof(struct friendNode));
+		f->user = r;
+		f->nextFriend = f;
+		r->fr = f;
 		r->name = n;
 		r->location = l;
 		r->gender = g;
@@ -186,24 +259,24 @@ struct node * find(struct node *q, char* n, char* l, int g, int a)
 	return q;
 }
 
-struct node * findName(struct node *q, char* n)
+struct node * findName(struct node **q, char* n)
 {
-	if(q == NULL)
+	if(*q == NULL)
 	{
 		printf("\n The list is empty\n");
-		return q;
+		return *q;
 	}
 
-	while(q->name != n)
+	while((*q)->name != n)
 	{
-		q = q->next;
-		if(q == NULL)
+		(*q) = (*q)->next;
+		if(*q == NULL)
 		{
 			printf("\n The given number is not in the list\n");
-			return q;
+			return *q;
 		}
 	}
-	return q;
+	return *q;
 }
 
 void delete(struct node **q, char* n, char* l, int g, int a)

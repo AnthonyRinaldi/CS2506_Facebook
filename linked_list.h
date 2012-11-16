@@ -1,7 +1,6 @@
 #ifndef LLIST
 #define LLIST
 
-// Declare structs
 struct node
 {
 	
@@ -10,7 +9,7 @@ struct node
 	int   gender;
 	int   age;
 
-	struct friendNode *friend;
+	struct friendNode *fr;
 	struct node *next;
 };
 
@@ -20,6 +19,9 @@ struct friendNode
 	struct node *user;
 };
 
+void appendF(struct node **q, struct node **r);
+int isFriends(struct node **q, struct node **r);
+
 void append(struct node **, char*, char*, int, int);
 void addatbeg(struct node **, char*, char*, int, int);
 void addafter(struct node *q, char* n, char* l, int g, int a);
@@ -27,6 +29,6 @@ void display(struct node *);
 int count(struct node *);
 void delete(struct node **, char*, char*, int, int);
 struct node * find(struct node *q, char* n, char* l, int g, int a);
-struct node * findName(struct node *q, char* n);
+struct node * findName(struct node **q, char* n);
 
 #endif
