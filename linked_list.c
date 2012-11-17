@@ -77,6 +77,64 @@ void addFriend(struct node **q, struct friendNode **f)
 
 }
 
+void delFriend(struct node **q, struct node **r)
+{/*
+	struct friendNode * root;
+	struct friendNode * temp;
+	temp = ((**q).fr);
+
+	//temp = (struct friendNode *) malloc(sizeof(struct friendNode));
+
+	while (temp != NULL && temp->nextFriend != NULL)
+	{
+		if (strncmp((*r)->name, temp->nextFriend->user->name, 20) == 0)
+		{
+			// Then remove it!
+			fprintf(out, "Remove Friendship!\n");
+			temp = (temp->nextFriend->nextFriend);
+		} else
+		{
+			// move on to the next friendNode
+			temp = temp->nextFriend;
+		}
+	}*/
+
+
+	struct friendNode *temp, *old;
+	temp = (*q)->fr;
+
+	while(temp != NULL)
+	{
+		if(temp->user == *r)
+		{
+			//if the node to delete is the first node
+			if(temp == (*q)->fr)
+			{
+				(*q)->fr = temp->nextFriend;
+				temp->nextFriend = NULL;
+				free(temp);
+				return;
+			}
+			else
+			{
+				old->nextFriend = temp->nextFriend;
+				temp->nextFriend = NULL;
+				free(temp);
+				return;
+			}		
+		}
+		else
+		{
+			old = temp;
+			temp = temp->nextFriend;
+		}
+	}
+	
+	//fprintf(out, "\n %s is not a part of the linked list\n", (*r)->name);
+	
+
+}
+
 // append friend
 // Assumptions: q and r are not NULL
 // Should be handled before
@@ -133,6 +191,9 @@ int isFriends(struct node **q, struct node **r)
 	{
 		struct friendNode ** temp1;
 		struct friendNode ** start;
+		temp1 = (struct friendNode **)malloc(sizeof(struct friendNode *));
+		start = (struct friendNode **)malloc(sizeof(struct friendNode *));
+
 		*temp1 = ((*q)->fr);
 		*start = ((*q)->fr);
 		do
@@ -143,7 +204,7 @@ int isFriends(struct node **q, struct node **r)
 				temp1 = &((*temp1)->nextFriend);
 		} while (temp1 != start);
 	}
-	else
+
 	return 0;
 	
 }
@@ -151,7 +212,7 @@ int isFriends(struct node **q, struct node **r)
 //void delF
 
 //Adds a node at the end of the linked list
-void append(struct node **q, char* n, char* l, int g, int a)
+void append(struct node **q, char* n, char* l, int a, int g)
 {
 	struct node *temp, *r;
 	temp = *q;
@@ -244,7 +305,7 @@ void addafter(struct node *q, char* n, char* l, int g, int a)
 	}
 	else
 	{
-		printf("\n %s is not a part of the linked list\n", n);
+		//printf("\n %s is not a part of the linked list\n", n);
 	}
 }
 
@@ -287,7 +348,7 @@ struct node * find(struct node *q, char* n, char* l, int g, int a)
 {
 	if(q == NULL)
 	{
-		fprintf(out, "\n The list is empty\n");
+		//fprintf(out, "\n The list is empty\n");
 		return q;
 	}
 
@@ -296,7 +357,7 @@ struct node * find(struct node *q, char* n, char* l, int g, int a)
 		q = q->next;
 		if(q == NULL)
 		{
-			fprintf(out, "\n The given user is not in the list\n");
+			//fprintf(out, "\n The given user is not in the list\n");
 			return q;
 		}
 	}
@@ -330,7 +391,7 @@ struct node * findName(struct node *q, char* n)
 {
 	if(q == NULL)
 	{
-		fprintf(out, "\n The list is empty\n");
+		//fprintf(out, "\n The list is empty\n");
 		return q;
 	}
 
@@ -339,21 +400,21 @@ struct node * findName(struct node *q, char* n)
 		q = q->next;
 		if(q == NULL)
 		{
-			fprintf(out, "\n The given name is not in the list\n");
+			//fprintf(out, "\n The given name is not in the list\n");
 			return NULL;
 		}
 	}
 	return q;
 }
 
-void delete(struct node **q, char* n, char* l, int g, int a)
+void delete(struct node **q, char* n)
 {
 	struct node *temp, *old;
 	temp = *q;
 
 	while(temp != NULL)
 	{
-		if(temp->name != n && temp->location != l && temp->gender != g && temp->age != a)
+		if(strncmp(temp->name, n, 20) != 0)
 		{
 			//if the node to delete is the first node
 			if(temp == *q)
@@ -378,5 +439,5 @@ void delete(struct node **q, char* n, char* l, int g, int a)
 		}
 	}
 	
-	fprintf(out, "\n %s is not a part of the linked list\n", n);
+	//fprintf(out, "\n %s is not a part of the linked list\n", n);
 }

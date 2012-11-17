@@ -8,7 +8,12 @@ test3 -> NULL
 test4 -> NULL
 test1 and test2 are now friends
 test1 and test4 are now friends
+test2 and test3 are now friends
 test1 -> test4 -> test2 -> NULL
-test2 -> NULL
-test3 -> NULL
+test2 -> test3 -> test1 -> NULL
+test3 -> test2 -> NULL
+test4 -> test1 -> NULL
+test1 -> test2 -> NULL
+test2 -> test3 -> test1 -> NULL
+test3 -> test2 -> NULL
 test4 -> NULL

@@ -5,5 +5,9 @@ add_user test4 18 male loc
 display_graph
 add_friend test1 test2
 add_friend test1 test4
+add_friend test2 test3
+display_graph
+delete_friend test4 test1
+delete_user test2
 display_graph
 exit_program
